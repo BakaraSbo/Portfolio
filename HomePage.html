@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="Style.css">
+	<title>Home | Jakub Sadowski</title>
+</head>
+<body>
+
+<div class="row">
+	<div class="column nav-left"></div>
+	<div class="column nav-middle">
+		<p style="position: relative; left: 20px; font-size: 20px;">Jakub Sadowski <br><span style="font-size: 15px">Game Programmer</span> </p>
+	</div>
+	<div class="column nav-right"></div>
+</div>
+
+<hr style="width: 80%; height: 2px;">
+
+<div class="row">
+	<div class="column nav-left"></div>
+	<div class="column nav-middle">
+		<div class="navbar">
+  			<a href="HomePage.html">Home</a>
+			<div class="dropdown">
+  				<button class="dropbtn">University Projects<i class="fa fa-caret-down"></i></button>
+  				<div class="dropdown-content">
+  					<a href="Project1.html">University Projects 1</a>
+  					<a href="Project1.html">University Projects 2</a>
+  					<a href="Project1.html">University Projects 3</a>
+  				</div>
+			</div>
+			<div class="dropdown">
+  				<button class="dropbtn">Personal Projects<i class="fa fa-caret-down"></i></button>
+  				<div class="dropdown-content">
+  					<a href="Project1.html">Personal Projects 1</a>
+  					<a href="Project1.html">Personal Projects 2</a>
+  					<a href="Project1.html">Personal Projects 3</a>
+  				</div>
+			</div>
+  			<a href="Contact.html">Contact</a>
+  			<div class="topnav-right">
+  				<a href="https://www.linkedin.com/in/jakub-sadowski-0a6b58172/" ><img src="https://icon-library.com/images/linkedin-icon-download/linkedin-icon-download-7.jpg"style="width: 30px; height: 30px;"></a>
+  			</div>
+		</div>
+	</div>
+	<div class="column nav-right"></div>
+</div>
+<div style="background-color:  #1D1D1D;">
+<hr style="width: 100%; height: 2px;">
+<section style="background-color:  #1D1D1D;">
+<div class="row">
+	<div class="column left"></div>
+	<div class="column middle">
+		<span class="img-container">	
+			<img src="Pictures/me.jpg" style="width: 20%;">
+			<p style="text-align: center; font-size: 40px;">Jakub Sadowski <br><span style="font-size: 20px">Game Programmer</span> </p>
+		</span>
+	</div>
+	<div class="column right"></div>
+</div>
+<hr style="width: 100%; height: 2px;">
+</div>
+</section>
+
+<h1>Best Projects</h1>
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <a href="Project1.html"><img src="Pictures/img1.jpg" style="width:100%"></a>
+    <div class="text">Project One <br/> Language</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <a href="Project1.html"><img src="Pictures/img2.jpg" style="width:100%"></a>
+    <div class="text">Project Two <br/> Language</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <a href="Project1.html"><img src="Pictures/img3.jpg" style="width:100%"></a>
+    <div class="text">Project Three <br/> Language </div>
+  </div>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+<h2 style="text-align: center;color: white">I'm ready for relocation</h2>
+<footer>
+	<p style="color: white">2020 Jakub Sadowski</p>
+</footer>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 5000); // Change image every 2 seconds
+}
+</script>
+</body>
+</html>
